@@ -3,12 +3,16 @@
 ## Variables Used
 ### Load Dataset
 
+| Variable Name | Definition |
+| --- | --- |
 | df | whole dataset |
 | X | features |
 | y | target |
 
 ### Split Dataset
 
+| Variable Name | Definition |
+| --- | --- |
 | X_train | training set - features |
 | X_vald | validation set - features |
 | X_test | test set - features |
@@ -20,6 +24,8 @@
 
 #### Missing Data
 
+| Variable Name | Definition |
+| --- | --- |
 | X_train_nan | X_train, replaced ‘?’ with nan |
 | X_train_imputed | X_train_nan, nan replaced with column mean |
 | X_vald_nan | X_vald, replaced ‘?’ with nan |
@@ -29,6 +35,8 @@
 
 #### Outliers
 
+| Variable Name | Definition |
+| --- | --- |
 | column_train | column index which contains outliers |
 | X_train_outlier | copy of X_train_imputed |
 | X_train_sqrt | X_train_outlier, columns with outlier transformed with square root transformation |
@@ -41,6 +49,8 @@
 
 #### Imbalanced Data
 
+| Variable Name | Definition |
+| --- | --- |
 | y_train_reset_index | y_train, index reset |
 | train | concatenation of X_train_sqrt and y_train_reset_index |
 | train_major | train, rows with column ‘Biopsy’ = 0 (majority class) |
@@ -69,6 +79,8 @@
 
 #### Data Normalization
 
+| Variable Name | Definition |
+| --- | --- |
 | columns_need_norm | Columns in the dataframe that needs to be normalized |
 | X_train_norm | X_train_sqrt, normalized |
 | X_vald_norm | X_vald_sqrt, normalized |
@@ -79,6 +91,8 @@
 
 #### Data Standardization
 
+| Variable Name | Definition |
+| --- | --- |
 | columns_need_std | Columns in the dataframe that needs to be standardized |
 | X_train_std | X_train_sqrt, standardized |
 | X_vald_std | X_vald_sqrt, standardized |
@@ -91,17 +105,23 @@
 
 #### Correlation Heatmap
 
+| Variable Name | Definition |
+| --- | --- |
 | train_corr | concatenation of X_train_std and y_train_rest_index, to be used in producing correlation matrix |
 | corr_matrix | correlation matrix created with train_corr |
 
 #### Identifying columns
 
+| Variable Name | Definition |
+| --- | --- |
 | corr_biopsy | corr_matrix with only the column ‘Biopsy’ |
 | drop_features | list of names of columns to be dropped |
 | drop_features_index | list of index of columns to be dropped |
 
 #### Drop low correlation features
 
+| Variable Name | Definition |
+| --- | --- |
 | X_train | X_train_std, with less correlatied features removed |
 | X_vald | X_vald_std, with less correlatied features removed |
 | X_test | X_test_std, with less correlatied features removed |
