@@ -1,4 +1,4 @@
-# Group-Cancer_2
+# Cervical-Cancer_Diagnosis_Prediction
 
 ## Variables Used
 ### Load Dataset
